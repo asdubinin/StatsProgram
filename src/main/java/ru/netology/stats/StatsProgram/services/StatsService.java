@@ -50,7 +50,9 @@ public class StatsService {
     public int belowAverageSales(int[] sales) {
         int sum = 0;
         int n = 0;
-        for (int sale : sales) sum = sum + sale;
+        for (int sale : sales) {
+            sum = sum + sale;
+        }
         for (int belowAverage : sales) {
             if (belowAverage < (sum / 12)) {
                 n = n + 1;
@@ -64,7 +66,9 @@ public class StatsService {
     public int aboveAverageSales(int[] sales) {
         int sum = 0;
         int n = 0;
-        for (int sale : sales) sum = sum + sale;
+        for (int sale : sales) {
+            sum = sum + sale;
+        }
         for (int aboveAverage : sales) {
             if (aboveAverage > (sum / 12)) {
                 n = n + 1;
