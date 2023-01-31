@@ -48,13 +48,9 @@ public class StatsService {
     // 5 метод количество месяцев продаж ниже среднего
 
     public int belowAverageSales(int[] sales) {
-        int sum = 0;
         int n = 0;
-        for (int sale : sales) {
-            sum = sum + sale;
-        }
         for (int belowAverage : sales) {
-            if (belowAverage < (sum / 12)) {
+            if (belowAverage < averageSales(sales)) {
                 n = n + 1;
             }
 
@@ -64,13 +60,9 @@ public class StatsService {
 
     // 6 метод количество месяцев продаж выше среднего
     public int aboveAverageSales(int[] sales) {
-        int sum = 0;
         int n = 0;
-        for (int sale : sales) {
-            sum = sum + sale;
-        }
         for (int aboveAverage : sales) {
-            if (aboveAverage > (sum / 12)) {
+            if (aboveAverage > averageSales(sales)) {
                 n = n + 1;
             }
         }
